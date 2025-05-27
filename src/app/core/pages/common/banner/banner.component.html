@@ -1,0 +1,24 @@
+<div
+  class="relative isolate flex justify-center items-center text-center overflow-hidden bg-cover bg-center h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] transition-all duration-700 ease-in-out"
+  [ngStyle]="{'background-image': 'url(' + banners[currentIndex].image + ')'}"
+>
+  <div class="absolute inset-0 bg-black opacity-30 z-0"></div>
+
+  <!-- Contenido centrado -->
+  <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 text-white text-center px-4">
+    <p class="text-3xl sm:text-4xl">
+      <strong class="font-semibold block">{{ banners[currentIndex].title }}</strong>
+      {{ banners[currentIndex].text }}
+    </p>
+  </div>
+
+  <!-- Controles -->
+  <div class="absolute bottom-2 left-1/2 -translate-x-1/2 z-10 flex gap-2">
+    <button (click)="prevSlide()" class="bg-white text-gray-700 p-1 rounded-full hover:bg-gray-300">
+      ‹
+    </button>
+    <button (click)="nextSlide()" class="bg-white text-gray-700 p-1 rounded-full hover:bg-gray-300">
+      ›
+    </button>
+  </div>
+</div>
