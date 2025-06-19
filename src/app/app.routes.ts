@@ -22,9 +22,13 @@ export const routes: Routes = [
                 title: 'About'
             },
             { 
-                path: '**', 
+                path: 'nofound', 
                 loadComponent: () => import('./core/pages/nofound/nofound.component')
             }
         ]
+    },
+    {
+        path: '**',
+        redirectTo: 'nofound'
     }
 ];
