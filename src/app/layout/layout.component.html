@@ -33,17 +33,19 @@
     <div class="md:hidden flex flex-col w-full">
       <header class="bg-green-800 text-white p-4 flex justify-between items-center">
         <span class="text-xl font-semibold">AgroLink 360</span>
-        <!-- <button (click)="toggleSidebar()" class="focus:outline-none">
+        kjgkjhljklaskdjfkalsjdflkjasdklfjaksdjfklajshdfhjshdlahldfjkhajd<button (click)="toggleSidebar()" class="focus:outline-none">
           ☰
-        </button> -->
+        </button>
       </header>
-      <div *ngIf="sidebarOpen" class="bg-green-800 text-white p-4 space-y-2">
+      @if (sidebarOpen) {
+      <div class="bg-green-800 text-white p-4 space-y-2">
         <a routerLink="/dashboard" class="block hover:bg-green-700 p-2 rounded">Dashboard</a>
         <a routerLink="/productos" class="block hover:bg-green-700 p-2 rounded">Productos</a>
         <a routerLink="/compras" class="block hover:bg-green-700 p-2 rounded">Compras</a>
         <a routerLink="/ventas" class="block hover:bg-green-700 p-2 rounded">Ventas</a>
         <a routerLink="/configuracion" class="block hover:bg-green-700 p-2 rounded">Configuración</a>
       </div>
+    }
       <!-- Content -->
       <main class="flex-1 p-4">
         <router-outlet></router-outlet>
