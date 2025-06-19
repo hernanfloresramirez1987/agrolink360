@@ -21,7 +21,10 @@ export const routes: Routes = [
                 loadComponent: () => import('./core/pages/about/about.component'),
                 title: 'About'
             },
-            { path: '**', redirectTo: '/notfound' }
+            { 
+                path: '**', 
+                loadComponent: () => import('./core/pages/nofound/nofound.component')
+            }
         ]
     }
 ];
