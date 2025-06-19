@@ -1,0 +1,1 @@
+import{Fa as r,Ga as s,Ja as p,ua as n}from"./chunk-IZMFEF4Q.js";var o=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=n({type:t,selectors:[["app-productores"]],decls:2,vars:0,template:function(e,a){e&1&&(r(0,"p"),p(1,"productores works!"),s())},encapsulation:2})};export{o as default};

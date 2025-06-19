@@ -1,0 +1,1 @@
+import{Fa as p,Ga as a,Ja as f,ua as t}from"./chunk-IZMFEF4Q.js";var o=class n{static \u0275fac=function(e){return new(e||n)};static \u0275cmp=t({type:n,selectors:[["app-nofound"]],decls:2,vars:0,template:function(e,i){e&1&&(p(0,"p"),f(1,"nofound works!"),a())},encapsulation:2})};export{o as default};
