@@ -32,7 +32,7 @@ jobs:
       #Route fiel renaming
       - name: Rename index for routing
         run: mv dist/agrolink360/browser/index.html dist/agrolink360/browser/404.html
-      #Deploy to Github pages
+      #Deploy to Github pages actual
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
