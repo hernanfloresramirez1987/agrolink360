@@ -1,2 +1,59 @@
-/* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
+
+/* Definición de animaciones y gradientes via CSS‑first */
+@theme {
+  /* Animación simple color */
+  @keyframes simpleColor {
+    0% { background-color: red; }
+    100% { background-color: blue; }
+  }
+  --animate-simpleColor: simpleColor 3s ease-in-out infinite;
+
+  /* Animación gradiente de fondo */
+  @keyframes backgroundMove {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  --animate-backgroundMove: backgroundMove 6s ease infinite;
+
+  /* Animación de gradiente de fondo grande */
+  @keyframes gradientMove {
+    0%,100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  --animate-gradientMove: gradientMove 8s ease infinite;
+  /* anadir shake */
+  @keyframes shake {
+    0%,100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+  }
+  --animate-shake: shake 0.5s ease-in-out infinite;
+  /* animation movement */
+  @keyframes movement {
+    /* alternate */
+    0% { transform: translateX(0); }
+    50% { transform: translateX(100px); }
+    100% { transform: translateX(0); }
+  }
+  --animate-movement: movement 2s ease-in-out infinite;
+  /* animation pulse */
+  @keyframes pulse {
+    /* transform: scale(1); */
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+  }
+  --animate-pulse: pulse 2s ease-in-out infinite;
+  /* animation shape */
+  @keyframes shape {
+    /* transform: rotate(0deg); and border radius en 3s */
+    0% { transform: rotate(0deg); border-radius: 0%; }
+    16% { transform: rotate(180deg); border-radius: 50% 0% 0% 0%; }
+    32% { transform: rotate(180deg); border-radius: 50% 50% 0% 0%; }
+    48% { transform: rotate(180deg); border-radius: 50% 50% 50% 0%; }
+    64%, 100% { transform: rotate(360deg); border-radius: 50%; }
+    
+  }
+  --animate-shape: shape 2s ease-in-out infinite;
+}

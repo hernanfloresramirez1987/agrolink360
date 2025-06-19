@@ -1,15 +1,27 @@
 import { Routes } from '@angular/router';
+import { LayoutComponent } from './layout/layout.component';
 
 export const routes: Routes = [
     {
-        path: '', 
-        redirectTo: 'home',
-        pathMatch: 'full'
-    },
-    {
-        path: 'home',
+        path: '',
         loadComponent: () => import('./core/pages/home/home.component'),
         title: 'Home'
     },
-    { path: '**', redirectTo: '/notfound' }
+    {
+        path: 'app',
+        component: LayoutComponent,
+        children: [
+            {
+                path: 'users',
+                loadChildren: () => import('./core/pages/users/users-routing.module'),
+                title: 'users'
+            },
+            {
+                path: 'about',
+                loadComponent: () => import('./core/pages/about/about.component'),
+                title: 'About'
+            },
+            { path: '**', redirectTo: '/notfound' }
+        ]
+    }
 ];
