@@ -15,12 +15,12 @@ export const routes: Routes = [
                 path: 'users',
                 loadComponent: () => import('./core/pages/users/users.component')
             },
+            {
+                path: 'home',
+                loadComponent: () => import('./core/pages/home/home.component'),
+                title: 'Home'
+            },
         ]
-    },
-    {
-        path: 'home',
-        loadComponent: () => import('./core/pages/home/home.component'),
-        title: 'Home'
     },
     {
         path: 'users',
