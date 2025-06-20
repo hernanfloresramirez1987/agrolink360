@@ -4,16 +4,6 @@ import { LayoutComponent } from './layout/layout.component';
 export const routes: Routes = [
     {
         path: '',
-        loadComponent: () => import('./core/pages/home/home.component'),
-        title: 'Home'
-    },
-    {
-        path: 'users',
-        loadChildren: () => import('./core/pages/users/users-routing.module'),
-        title: 'users'
-    },
-    {
-        path: 'app',
         component: LayoutComponent,
         children: [
             {
@@ -22,6 +12,16 @@ export const routes: Routes = [
                 title: 'About'
             },
         ]
+    },
+    {
+        path: 'home',
+        loadComponent: () => import('./core/pages/home/home.component'),
+        title: 'Home'
+    },
+    {
+        path: 'users',
+        loadChildren: () => import('./core/pages/users/users-routing.module'),
+        title: 'users'
     },
     { 
         path: 'notfound', 
