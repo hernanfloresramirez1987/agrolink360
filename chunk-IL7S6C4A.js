@@ -1,0 +1,1 @@
+import{L as r,ka as a}from"./chunk-6YO64VYQ.js";var n=class e{_theme=a("green");get theme(){return this._theme}setTheme(t){this._theme.set(t)}static \u0275fac=function(i){return new(i||e)};static \u0275prov=r({token:e,factory:e.\u0275fac,providedIn:"root"})};export{n as a};
