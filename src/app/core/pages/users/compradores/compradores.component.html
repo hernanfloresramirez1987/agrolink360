@@ -1,1 +1,74 @@
-<p>compradores works!</p>
+<div class="bg-white p-6 rounded shadow-md max-w-lg mx-auto mt-10">
+  <h2 class="text-2xl font-semibold text-green-800 mb-4">Registro de Usuario</h2>
+
+  <form class="space-y-4">
+
+    <!-- Nombre -->
+    <div>
+      <label class="block text-gray-700">Nombre Completo</label>
+      <input type="text" name="nombre" required class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-green-500">
+      <input type="text" [(ngModel)]="usuario.nombre" name="nombre" required/>
+    </div>
+
+    <!-- Correo -->
+    <div>
+      <label class="block text-gray-700">Correo Electrónico</label>
+      <input type="email" [(ngModel)]="usuario.correo" name="correo" required
+        class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-green-500">
+    </div>
+
+    <!-- Contraseña -->
+    <div>
+      <label class="block text-gray-700">Contraseña</label>
+      <input type="password" [(ngModel)]="usuario.contrasena" name="contrasena" required class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-green-500">
+    </div>
+
+    <!-- Tipo de usuario -->
+    <div>
+      <label class="block text-gray-700">Tipo de Usuario</label>
+      <select [(ngModel)]="usuario.tipo_usuario" name="tipo_usuario" required
+        class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-green-500">
+        <option value="" disabled selected>Selecciona un tipo</option>
+        <option value="admin">Administrador</option>
+        <option value="productor">Productor</option>
+        <option value="comprador">Comprador</option>
+        <option value="transportista">Transportista</option>
+        <option value="logistica">Servicio Logístico</option>
+      </select>
+    </div>
+
+    <!-- Campos dinámicos por tipo -->
+    @if (usuario.tipo_usuario === 'productor') {
+        <div>
+            <label class="block text-gray-700">Nombre de Finca</label>
+            <input type="text" name="nombre_finca" class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-green-500">
+        </div>
+    }
+
+    @if (usuario.tipo_usuario === 'comprador') {
+        <div>
+        <label class="block text-gray-700">Nombre Empresa Compradora</label>
+            <input type="text" name="nombre_empresa" class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-green-500">
+        </div>
+    }
+
+    @if (usuario.tipo_usuario === 'transportista') {
+        <div>
+        <label class="block text-gray-700">Tipo de Vehículo</label>
+        <input type="text" name="tipo_vehiculo"
+            class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-green-500">
+        </div>
+    }
+
+    @if (usuario.tipo_usuario === 'logistica') {
+        <div>
+        <label class="block text-gray-700">Nombre Empresa Logística</label>
+        <input type="text" name="nombre_logistica"
+            class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-green-500">
+        </div>
+    }
+
+    <!-- Botón -->
+    <button type="submit" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition duration-200">Registrar</button>
+  </form>
+</div>

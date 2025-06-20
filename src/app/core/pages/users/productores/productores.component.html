@@ -1,1 +1,120 @@
-<p>productores works!</p>
+<div class="bg-white p-8 rounded shadow-md max-w-7xl mx-auto mt-10">
+    <h2 class="text-3xl font-bold text-green-800 mb-6 text-center">Registro de Productor</h2>
+  
+    <form #productorForm="ngForm" (ngSubmit)="registrarProductor()">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+  
+        <!-- Columna 1 -->
+        <div class="space-y-4">
+          <h3 class="text-xl font-semibold text-green-700">Datos de Usuario</h3>
+  
+          <div>
+            <label class="block text-gray-700">Nombre Completo</label>
+            <input type="text" name="nombre" [(ngModel)]="nuevoProductor.nombre" required
+                   class="w-full border border-gray-300 p-3 rounded focus:ring-2 focus:ring-green-500">
+          </div>
+  
+          <div>
+            <label class="block text-gray-700">Correo Electrónico</label>
+            <input type="email" name="correo" [(ngModel)]="nuevoProductor.correo" required
+                   class="w-full border border-gray-300 p-3 rounded focus:ring-2 focus:ring-green-500">
+          </div>
+  
+          <div>
+            <label class="block text-gray-700">Contraseña</label>
+            <input type="password" name="contrasena" [(ngModel)]="nuevoProductor.contrasena" required
+                   class="w-full border border-gray-300 p-3 rounded focus:ring-2 focus:ring-green-500">
+          </div>
+  
+          <div>
+            <label class="block text-gray-700">Teléfono</label>
+            <input type="text" name="telefono" [(ngModel)]="nuevoProductor.telefono"
+                   class="w-full border border-gray-300 p-3 rounded focus:ring-2 focus:ring-green-500">
+          </div>
+  
+          <div>
+            <label class="block text-gray-700">Dirección</label>
+            <input type="text" name="direccion" [(ngModel)]="nuevoProductor.direccion"
+                   class="w-full border border-gray-300 p-3 rounded focus:ring-2 focus:ring-green-500">
+          </div>
+  
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-gray-700">Latitud</label>
+              <input type="number" step="0.00000001" name="latitud" [(ngModel)]="nuevoProductor.latitud"
+                     class="w-full border border-gray-300 p-3 rounded focus:ring-2 focus:ring-green-500">
+            </div>
+            <div>
+              <label class="block text-gray-700">Longitud</label>
+              <input type="number" step="0.00000001" name="longitud" [(ngModel)]="nuevoProductor.longitud"
+                     class="w-full border border-gray-300 p-3 rounded focus:ring-2 focus:ring-green-500">
+            </div>
+          </div>
+        </div>
+  
+        <!-- Columna 2 -->
+        <div class="space-y-4">
+          <h3 class="text-xl font-semibold text-green-700">Datos de Productor</h3>
+  
+          <div>
+            <label class="block text-gray-700">Nombre de Finca</label>
+            <input type="text" name="nombre_finca" [(ngModel)]="nuevoProductor.nombre_finca" required
+                   class="w-full border border-gray-300 p-3 rounded focus:ring-2 focus:ring-green-500">
+          </div>
+  
+          <div>
+            <label class="block text-gray-700">Descripción de la Finca</label>
+            <textarea name="descripcion" [(ngModel)]="nuevoProductor.descripcion" rows="4"
+                      class="w-full border border-gray-300 p-3 rounded focus:ring-2 focus:ring-green-500"></textarea>
+          </div>
+  
+          <div>
+            <label class="block text-gray-700">Área Total (Ha)</label>
+            <input type="number" step="0.01" name="area_total" [(ngModel)]="nuevoProductor.area_total"
+                   class="w-full border border-gray-300 p-3 rounded focus:ring-2 focus:ring-green-500">
+          </div>
+  
+          <h3 class="text-xl font-semibold text-green-700 mt-6">Finca Secundaria (Opcional)</h3>
+  
+          <div>
+            <label class="block text-gray-700">Nombre de Finca Secundaria</label>
+            <input type="text" name="finca_nombre_secundaria" [(ngModel)]="nuevoProductor.finca_secundaria.nombre"
+                   class="w-full border border-gray-300 p-3 rounded focus:ring-2 focus:ring-green-500">
+          </div>
+  
+          <div>
+            <label class="block text-gray-700">Descripción Finca Secundaria</label>
+            <textarea name="finca_descripcion" [(ngModel)]="nuevoProductor.finca_secundaria.descripcion" rows="3"
+                      class="w-full border border-gray-300 p-3 rounded focus:ring-2 focus:ring-green-500"></textarea>
+          </div>
+  
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-gray-700">Área Total (Ha)</label>
+              <input type="number" step="0.01" name="finca_area_total" [(ngModel)]="nuevoProductor.finca_secundaria.area_total"
+                     class="w-full border border-gray-300 p-3 rounded focus:ring-2 focus:ring-green-500">
+            </div>
+            <div>
+              <label class="block text-gray-700">Latitud</label>
+              <input type="number" step="0.00000001" name="finca_latitud" [(ngModel)]="nuevoProductor.finca_secundaria.latitud"
+                     class="w-full border border-gray-300 p-3 rounded focus:ring-2 focus:ring-green-500">
+            </div>
+            <div>
+              <label class="block text-gray-700">Longitud</label>
+              <input type="number" step="0.00000001" name="finca_longitud" [(ngModel)]="nuevoProductor.finca_secundaria.longitud"
+                     class="w-full border border-gray-300 p-3 rounded focus:ring-2 focus:ring-green-500">
+            </div>
+          </div>
+  
+        </div>
+      </div>
+  
+      <!-- Botón -->
+      <div class="mt-8 text-center">
+        <button type="submit"
+                class="bg-green-700 text-white py-3 px-6 rounded hover:bg-green-800 transition duration-200">
+          Registrar Productor
+        </button>
+      </div>
+    </form>
+</div>

@@ -1,7 +1,44 @@
-<div class="relative isolate flex justify-center items-center text-center overflow-hidden bg-cover bg-center h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] transition-all duration-700 ease-in-out" [ngStyle]="{'background-image': 'url(' + banners[currentIndex].image + ')'}" >
-  <div class="absolute inset-0 bg-black opacity-30 z-0"></div>
+<div 
+  class="relative isolate flex justify-center items-center text-center overflow-hidden bg-cover bg-center h-[250px] sm:h-[350px] md:h-[450px] lg:h-[550px] xl:h-[650px] transition-all duration-700 ease-in-out rounded-xl shadow-lg"
+  [ngStyle]="{'background-image': 'url(' + banners[currentIndex].image + ')'}">
+
+  <!-- Overlay Gradiente -->
+  <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent z-0"></div>
 
   <!-- Contenido centrado -->
+  <div class="absolute inset-0 flex flex-col justify-center items-center z-10 text-white px-4">
+    <p class="text-3xl sm:text-4xl md:text-5xl font-bold drop-shadow-lg">
+      {{ banners[currentIndex].title }}
+    </p>
+    <p class="mt-2 text-base sm:text-lg md:text-xl font-light max-w-2xl drop-shadow-md">
+      {{ banners[currentIndex].text }}
+    </p>
+  </div>
+
+  <!-- Controles -->
+  <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10 flex gap-4">
+    <button 
+      aria-label="Slide anterior" 
+      (click)="prevSlide()" 
+      class="bg-white/80 text-gray-700 p-2 rounded-full hover:bg-white shadow-md transition duration-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+    <button 
+      aria-label="Slide siguiente" 
+      (click)="nextSlide()" 
+      class="bg-white/80 text-gray-700 p-2 rounded-full hover:bg-white shadow-md transition duration-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+  </div>
+</div>
+<!-- <div class="relative isolate flex justify-center items-center text-center overflow-hidden bg-cover bg-center h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] transition-all duration-700 ease-in-out" [ngStyle]="{'background-image': 'url(' + banners[currentIndex].image + ')'}" >
+  <div class="absolute inset-0 bg-black opacity-30 z-0"></div>
+
+
   <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 text-white text-center px-4">
     <p class="text-3xl sm:text-4xl">
       <strong class="font-semibold block">{{ banners[currentIndex].title }}</strong>
@@ -9,8 +46,8 @@
     </p>
   </div>
 
-  <!-- Controles -->
-  <div class="absolute bottom-2 left-1/2 -translate-x-1/2 z-10 flex gap-2">
+  
+  <div class="absolute bottom-2 left-1/2 -translate-x-1/2 z-10 flex gap-2 justify-between">
     <button (click)="prevSlide()" class="bg-white text-gray-700 p-1 rounded-full hover:bg-gray-300">
       ‹
     </button>
@@ -18,4 +55,4 @@
       ›
     </button>
   </div>
-</div>
+</div> -->

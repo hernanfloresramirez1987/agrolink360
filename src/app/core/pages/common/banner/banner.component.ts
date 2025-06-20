@@ -8,6 +8,40 @@ import { CommonModule } from '@angular/common';
   styleUrl: './banner.component.css'
 })
 export class BannerComponent {
+  // banners = [
+  //   { image: 'assets/banner1.jpg', title: 'Agrolink 360', text: 'Soluciones para el agro' },
+  //   { image: 'assets/banner2.jpg', title: 'Productores conectados', text: 'Lleva tu producción al mundo' },
+  //   { image: 'assets/banner3.jpg', title: 'Transporte seguro', text: 'Logística eficiente y confiable' }
+  // ];
+  
+  // currentIndex = 0;
+  intervalId: any;
+
+  ngOnInit() {
+    this.startAutoSlide();
+  }
+
+  startAutoSlide() {
+    this.intervalId = setInterval(() => {
+      this.nextSlide();
+    }, 2500); // cambia cada 5 segundos
+  }
+
+  nextSlide() {
+    this.currentIndex = (this.currentIndex + 1) % this.banners.length;
+  }
+
+  prevSlide() {
+    this.currentIndex = (this.currentIndex - 1 + this.banners.length) % this.banners.length;
+  }
+
+  ngOnDestroy() {
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+    }
+  }
+
+
   currentIndex = 0;
 
   banners = [
@@ -36,11 +70,11 @@ export class BannerComponent {
     }
   ];
 
-  nextSlide() {
-    this.currentIndex = (this.currentIndex + 1) % this.banners.length;
-  }
+  // nextSlide() {
+  //   this.currentIndex = (this.currentIndex + 1) % this.banners.length;
+  // }
 
-  prevSlide() {
-    this.currentIndex = (this.currentIndex - 1 + this.banners.length) % this.banners.length;
-  }
+  // prevSlide() {
+  //   this.currentIndex = (this.currentIndex - 1 + this.banners.length) % this.banners.length;
+  // }
 }

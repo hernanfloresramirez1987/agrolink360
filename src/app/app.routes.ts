@@ -8,14 +8,14 @@ export const routes: Routes = [
         title: 'Home'
     },
     {
+        path: 'users',
+        loadChildren: () => import('./core/pages/users/users-routing.module'),
+        title: 'users'
+    },
+    {
         path: 'app',
         component: LayoutComponent,
         children: [
-            {
-                path: 'users',
-                loadChildren: () => import('./core/pages/users/users-routing.module'),
-                title: 'users'
-            },
             {
                 path: 'about',
                 loadComponent: () => import('./core/pages/about/about.component'),
@@ -24,8 +24,8 @@ export const routes: Routes = [
         ]
     },
     { 
-        path: 'nofound', 
+        path: 'notfound', 
         loadComponent: () => import('./core/pages/nofound/nofound.component')
     },
-    { path: '**', redirectTo: '/notfound' }
+    { path: '**', redirectTo: 'notfound' }
 ];
