@@ -1,18 +1,104 @@
-<app-banner/>
-<div class="animate-simpleColor">
-    Animación de color en bucle
-  </div>
-<div class="flex flex-col justify-center items-start gap-12 bg-neutral-800">
-    <div class="w-screen h-screen flex justify-evenly items-center">
-        <div class="w-36 h-36 bg-gray-500 animate-simpleColor"></div>
-        <div class="w-36 h-36 bg-gradient-to-r from-pink-500 via-yellow-500 to-green-500 bg-[length:200%_200%] animate-gradientMove"></div>
-        <div class="w-36 h-36 bg-yellow-400 animate-shake"></div>
-    </div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-4">
 
-    <div class="flex justify-evenly items-center w-full">
-        <div class="w-36 h-36 bg-orange-500 animate-movement "></div>
-        <div class="w-36 h-36 bg-orange-300 animate-pulse"></div>
-        <div class="w-36 h-36 bg-cyan-500 animate-shape"></div>
+    <!-- Dashboard -->
+    <div class="group bg-slate-900 border border-slate-700 rounded-xl p-6 shadow-lg 
+                transition-all duration-500 hover:bg-emerald-500 hover:border-emerald-400 
+                text-slate-300 hover:text-white transform hover:scale-105 cursor-pointer">
+  
+      <div class="flex justify-center mb-4">
+        <i class="pi pi-home text-4xl text-emerald-400 group-hover:text-white transition-colors duration-300"></i>
+      </div>
+      <h3 class="text-xl font-bold text-center mb-2">Dashboard</h3>
+      <p class="text-center text-sm">
+        Vista general de datos, estadísticas y rendimiento de la agroindustria.
+      </p>
+      <div class="mt-4 flex justify-center">
+        <button class="px-4 py-2 bg-slate-800 text-emerald-400 rounded-full border border-emerald-400 
+                        group-hover:bg-white group-hover:text-emerald-600 transition-all duration-300">
+          Ir al Dashboard
+        </button>
+      </div>
     </div>
-</div>
-<app-footer/>
+  
+    <!-- Productos -->
+    <div class="group bg-slate-900 border border-slate-700 rounded-xl p-6 shadow-lg 
+                transition-all duration-500 hover:bg-green-500 hover:border-green-300 
+                text-slate-300 hover:text-white transform hover:scale-105 cursor-pointer">
+  
+      <div class="flex justify-center mb-4">
+        <i class="pi pi-box text-4xl text-green-400 group-hover:text-white transition-colors duration-300"></i>
+      </div>
+      <h3 class="text-xl font-bold text-center mb-2">Productos</h3>
+      <p class="text-center text-sm">
+        Administra insumos, semillas, fertilizantes y productos agroindustriales.
+      </p>
+      <div class="mt-4 flex justify-center">
+        <button class="px-4 py-2 bg-slate-800 text-green-400 rounded-full border border-green-400 
+                        group-hover:bg-white group-hover:text-green-600 transition-all duration-300">
+          Ver Productos
+        </button>
+      </div>
+    </div>
+  
+    <!-- Compras -->
+    <div class="group bg-slate-900 border border-slate-700 rounded-xl p-6 shadow-lg 
+                transition-all duration-500 hover:bg-yellow-500 hover:border-yellow-300 
+                text-slate-300 hover:text-white transform hover:scale-105 cursor-pointer">
+  
+      <div class="flex justify-center mb-4">
+        <i class="pi pi-shopping-cart text-4xl text-yellow-400 group-hover:text-white transition-colors duration-300"></i>
+      </div>
+      <h3 class="text-xl font-bold text-center mb-2">Compras</h3>
+      <p class="text-center text-sm">
+        Control de órdenes de compra, proveedores y abastecimientos.
+      </p>
+      <div class="mt-4 flex justify-center">
+        <button class="px-4 py-2 bg-slate-800 text-yellow-400 rounded-full border border-yellow-400 
+                        group-hover:bg-white group-hover:text-yellow-600 transition-all duration-300">
+          Ver Compras
+        </button>
+      </div>
+    </div>
+  
+    <!-- Ventas -->
+    <div class="group bg-slate-900 border border-slate-700 rounded-xl p-6 shadow-lg 
+                transition-all duration-500 hover:bg-sky-500 hover:border-sky-300 
+                text-slate-300 hover:text-white transform hover:scale-105 cursor-pointer">
+  
+      <div class="flex justify-center mb-4">
+        <i class="pi pi-chart-line text-4xl text-sky-400 group-hover:text-white transition-colors duration-300"></i>
+      </div>
+      <h3 class="text-xl font-bold text-center mb-2">Ventas</h3>
+      <p class="text-center text-sm">
+        Visualiza transacciones, clientes y estadísticas de ventas.
+      </p>
+      <div class="mt-4 flex justify-center">
+        <button class="px-4 py-2 bg-slate-800 text-sky-400 rounded-full border border-sky-400 
+                        group-hover:bg-white group-hover:text-sky-600 transition-all duration-300">
+          Ver Ventas
+        </button>
+      </div>
+    </div>
+  
+    <!-- Configuración -->
+    <div class="group bg-slate-900 border border-slate-700 rounded-xl p-6 shadow-lg 
+                transition-all duration-500 hover:bg-pink-500 hover:border-pink-300 
+                text-slate-300 hover:text-white transform hover:scale-105 cursor-pointer">
+  
+      <div class="flex justify-center mb-4">
+        <i class="pi pi-cog text-4xl text-pink-400 group-hover:text-white transition-colors duration-300"></i>
+      </div>
+      <h3 class="text-xl font-bold text-center mb-2">Configuración</h3>
+      <p class="text-center text-sm">
+        Ajusta parámetros del sistema, usuarios y preferencias de AgroLink360.
+      </p>
+      <div class="mt-4 flex justify-center">
+        <button class="px-4 py-2 bg-slate-800 text-pink-400 rounded-full border border-pink-400 
+                        group-hover:bg-white group-hover:text-pink-600 transition-all duration-300">
+          Configurar
+        </button>
+      </div>
+    </div>
+  
+  </div>
+  
