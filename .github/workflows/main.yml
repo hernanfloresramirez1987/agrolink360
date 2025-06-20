@@ -1,5 +1,5 @@
 # This is a basic workflow to help you get started with Actions
-name: CI AgroLink360
+name: CI Avitem Importaciones
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "develop" branch
@@ -36,7 +36,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
-          #url_api: $ {{ secrets.URL_API }}
-          #defaultLanguage: $ {{ secrets.defaultLanguage }}
+          url_api: ${{ secrets.URL_API }}
+          defaultLanguage: ${{ secrets.defaultLanguage }}
           folder: dist/agrolink360/browser
           branch: gh-pages  # Ajusta la carpeta de construcción según la configuración de tu proyecto
