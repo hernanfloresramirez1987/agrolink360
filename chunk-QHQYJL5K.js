@@ -1,0 +1,1 @@
+import{Ea as s,Va as n,Wa as i,cb as r}from"./chunk-ZN4WSMTF.js";var e=class o{static \u0275fac=function(t){return new(t||o)};static \u0275cmp=s({type:o,selectors:[["app-transportisticos"]],decls:2,vars:0,template:function(t,a){t&1&&(n(0,"p"),r(1,"transportisticos works!"),i())},encapsulation:2})};export{e as default};
