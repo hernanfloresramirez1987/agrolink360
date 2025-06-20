@@ -27,8 +27,5 @@ export const routes: Routes = [
         path: 'nofound', 
         loadComponent: () => import('./core/pages/nofound/nofound.component')
     },
-    {
-        path: '**',
-        redirectTo: '/notfound'
-    }
+    { path: '**', redirectTo: '/notfound' }
 ];
