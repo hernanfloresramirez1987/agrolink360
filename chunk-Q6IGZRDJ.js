@@ -1,0 +1,1 @@
+import{Ea as n,Sa as o,Ta as a,Ya as r}from"./chunk-SNA5BRJX.js";var e=class s{static \u0275fac=function(t){return new(t||s)};static \u0275cmp=n({type:s,selectors:[["app-transportistas"]],decls:2,vars:0,template:function(t,i){t&1&&(o(0,"p"),r(1,"transportistas works!"),a())},encapsulation:2})};export{e as default};
