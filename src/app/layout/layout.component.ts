@@ -6,11 +6,12 @@ import { ThemeService } from './services/theme.service';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { BreadcrumsComponent } from './components/breadcrums/breadcrums.component';
 
 @Component({
   standalone: true,
   selector: 'app-layout',
-  imports: [RouterOutlet, CommonModule, RouterModule, FormsModule, ReactiveFormsModule, HeaderComponent, FooterComponent, SidebarComponent],
+  imports: [RouterOutlet, CommonModule, RouterModule, FormsModule, ReactiveFormsModule, HeaderComponent, FooterComponent, SidebarComponent, BreadcrumsComponent],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.css'
 })

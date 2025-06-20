@@ -5,27 +5,97 @@
     : 'bg-gradient-to-r from-slate-900 to-slate-500'
     "
  class="w-full backdrop-blur-md text-white py-8 px-4 shadow-xl">
- 
- <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
-   <div class="text-center md:text-left space-y-2">
-     <h2 class="text-2xl font-bold tracking-wide">AgroLink 360</h2>
-     <p class="text-sm text-white/80">Transformando la gestión agroindustrial con tecnología inteligente.</p>
-   </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
 
-   <div class="flex space-x-6 text-sm">
-     <a href="#" class="hover:text-yellow-300 transition">Nosotros</a>
-     <a href="#" class="hover:text-yellow-300 transition">Servicios</a>
-     <a href="#" class="hover:text-yellow-300 transition">Contacto</a>
-   </div>
+    <!-- Logo y descripción -->
+    <div>
+      <h3 class="text-2xl font-bold mb-2">Agrolink 360</h3>
+      <p class="text-sm text-gray-300">Plataforma integral para productores, compradores y logística agrícola. Conectamos el campo con el mercado de manera eficiente.</p>
+    </div>
 
-   <div class="flex space-x-4 text-lg">
-     <a href="#" class="hover:text-blue-700 transition"><i class="pi pi-facebook text-2xl"></i></a>
-     <a href="#" class="hover:text-pink-700 transition"><i class="pi pi-instagram text-2xl"></i></a>
-     <a href="#" class="hover:text-sky-700 transition"><i class="pi pi-twitter text-2xl"></i></a>
-   </div>
- </div>
+    <!-- Enlaces Rápidos -->
+    <div>
+      <h4 class="font-semibold">Enlaces</h4>
+      <ul class="space-y-1 text-gray-300 text-sm">
+        <li class="transform transition-transform duration-300 ease-in-out hover:scale-105">
+          <a routerLink="/" routerLinkActive="font-semibold text-white" class="text-gray-300 hover:text-white transition-colors duration-300">
+            Inicio
+          </a>
+        </li>
+        <li class="transform transition-transform duration-300 ease-in-out hover:scale-105">
+          <a routerLink="/users" routerLinkActive="font-semibold text-white" class="text-gray-300 hover:text-white transition-colors duration-300">
+            Usuarios
+          </a>
+        </li>
+        <li class="transform transition-transform duration-300 ease-in-out hover:scale-105">
+          <a routerLink="/users/productores" routerLinkActive="font-semibold text-white" class="text-gray-300 hover:text-white transition-colors duration-300">
+            Productos
+          </a>
+        </li>
+        <li class="transform transition-transform duration-300 ease-in-out hover:scale-105">
+          <a routerLink="/users/compradores" routerLinkActive="font-semibold text-white" class="text-gray-300 hover:text-white transition-colors duration-300">
+            Compradores
+          </a>
+        </li>
+        <li class="transform transition-transform duration-1000 hover:scale-110"><a href="#" class="hover:text-white">Servicios</a></li>
+        <li class="transform transition-transform duration-1000 hover:scale-110"><a href="#" class="hover:text-white">Contacto</a></li>
+      </ul>
+    </div>
 
- <div class="mt-6 text-center text-sm font-bold text-white/60">
-   © 2025 AgroLink 360. Desarrollado por Hernán Flores Ramírez.
- </div>
+    <!-- Contacto -->
+    <div>
+      <h4 class="font-semibold mb-2">Contacto</h4>
+      <div class="flex flex-col space-y-2 text-white text-sm">
+        <a href="https://wa.me/59177797353" target="_blank"
+        class="flex items-center space-x-2 text-green-600 hover:text-slate-900 transition duration-300 transform transition-transform duration-1000 hover:scale-150">
+          <i class="pi pi-whatsapp text-xl"></i>
+          <span class="text-white">Contactar</span>
+        </a>
+        <a href="tel:+59177797353">
+          <div class="flex items-center space-x-2 hover:text-slate-900 transform transition-transform duration-1000 hover:scale-150">
+            <i class="pi pi-phone text-lg text-neutral-800"></i>
+            <span>Tel: +591 777 973 530</span>
+          </div>
+        </a>
+        <a href="mailto:ejemplo@correo.com" 
+          class="hover:text-blue-300 transition duration-300">
+          <div class="flex items-center space-x-2 hover:text-slate-900 transform transition-transform duration-1000 hover:scale-150">
+            <i class="pi pi-envelope text-lg text-neutral-800"></i>
+            <span>Email: info&#64;agrolink360.com</span>
+          </div>
+        </a>
+        <a href="https://www.google.com/maps/@-17.7708549,-63.1802641,3996m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI1MDYxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800"
+
+        class="flex items-center space-x-2 text-red-600 hover:text-slate-900 transition duration-300 transform transition-transform duration-1000 hover:scale-150">
+          <i class="pi pi-map-marker text-xl"></i>
+          <span class="text-white">Dirección: Santa Cruz, Bolivia</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Redes Sociales -->
+    <div>
+      <h4 class="font-semibold mb-2">Síguenos</h4>
+      <div class="flex space-x-4">
+        <a href="#" class="text-blue-600 hover:text-blue-500 transform transition-transform duration-500 ease-in-out hover:scale-175">
+          <i class="pi pi-facebook text-2xl"></i>
+        </a>
+        <a href="#" class="text-pink-600 hover:text-pink-500 transform transition-transform duration-500 ease-in-out hover:scale-175">
+          <i class="pi pi-instagram text-2xl"></i>
+        </a>
+        <a href="#" class="text-sky-600 hover:text-sky-500 transform transition-transform duration-500 ease-in-out hover:scale-175">
+          <i class="pi pi-twitter text-2xl"></i>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Línea separadora -->
+  <div [ngClass]="colorTheme() === 'green' 
+    ? 'border-t border-green-700 text-slate-800' 
+    : 'border-t border-slate-900 text-emerald-100'"
+    class="mt-2 pt-2 text-center text-sm">
+    © 2025 AgroLink 360. Todos los derechos reservados.<br>Developer to Ing. Hernan Flores Ramirez
+</div>
 </footer>

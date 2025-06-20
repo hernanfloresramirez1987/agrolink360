@@ -11,6 +11,10 @@ export const routes: Routes = [
                 loadComponent: () => import('./core/pages/about/about.component'),
                 title: 'About'
             },
+            {
+                path: 'users',
+                loadComponent: () => import('./core/pages/users/users.component')
+            },
         ]
     },
     {

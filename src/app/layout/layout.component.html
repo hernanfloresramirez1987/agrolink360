@@ -5,6 +5,8 @@
       <app-sidebar [incolorTheme]="colorTheme()" [isSidebarOpen]="sidebarOpen()"/>
     }
     <div class="md:hidden flex flex-col w-full">
+      <!-- <app-breadcrums/> -->
+
       @if (sidebarOpen()) {
       <div class="bg-green-800 text-white p-4 space-y-2">
         <a routerLink="/dashboard" class="block hover:bg-green-700 p-2 rounded">Dashboard</a>
@@ -15,18 +17,16 @@
       </div>
     }
       <main class="flex-1 p-4">
-        <router-outlet></router-outlet>
+        <!-- mobile -->
+        <app-breadcrums/>
+        <router-outlet/>
       </main>
     </div>
-
-    <!-- Main Content -->
     <main class="flex-1 overflow-y-auto p-4">
-      <router-outlet></router-outlet>
+      <!-- desktop -->
+       <app-breadcrums/>
+      <router-outlet/>
     </main>
-    
   </div>
-
-  <!-- Footer -->
-  <app-footer></app-footer>
-
+  <app-footer/>
 </div>

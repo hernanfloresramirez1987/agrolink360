@@ -1,0 +1,20 @@
+<ol class="flex space-x-2 text-sm pb-2" 
+    [ngClass]="colorTheme() === 'green' 
+               ? 'text-green-800' 
+               : 'text-slate-700'">
+  
+  @for (item of items; track item; let last = $last) {
+    <li class="flex items-center">
+      <a [routerLink]="item.url"
+         class="hover:underline font-medium transition duration-300"
+         [ngClass]="colorTheme() === 'green' 
+                      ? 'hover:text-emerald-600' 
+                      : 'hover:text-slate-700'">
+         {{ item.label }}
+      </a>
+      @if (!last) {
+        <span class="mx-2">/</span>
+      }
+    </li>
+  }
+</ol>
