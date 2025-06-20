@@ -1,0 +1,30 @@
+<aside [ngClass]="incolorTheme() === 'green'
+        ? 'bg-gradient-to-b from-green-800 to-green-600'
+        : 'bg-gradient-to-b from-slate-700 to-slate-900'"
+      class="w-64 flex-shrink-0 hidden md:block text-white transition-all duration-500 shadow-xl overflow-y-auto p-2 h-full">
+  <!-- <div class="p-4 text-2xl font-semibold border-b" [ngClass]="incolorTheme() === 'green' ? 'border-green-700' : 'border-slate-700'">
+    AgroLink 360
+  </div> -->
+  <nav class="mt-4 flex flex-col space-y-2">
+    <a routerLink="/dashboard" class="hover:bg-green-700 p-3 rounded flex items-center space-x-2">
+      <span>🏠</span>
+      <span>Dashboard</span>
+    </a>
+    <a routerLink="/productos" class="hover:bg-green-700 p-3 rounded flex items-center space-x-2">
+      <span>🌾</span>
+      <span>Productos</span>
+    </a>
+    <a routerLink="/compras" class="hover:bg-green-700 p-3 rounded flex items-center space-x-2">
+      <span>🛒</span>
+      <span>Compras</span>
+    </a>
+    <a routerLink="/ventas" class="hover:bg-green-700 p-3 rounded flex items-center space-x-2">
+      <span>💼</span>
+      <span>Ventas</span>
+    </a>
+    <a routerLink="/configuracion" class="hover:bg-green-700 p-3 rounded flex items-center space-x-2">
+      <span>⚙️</span>
+      <span>Configuración</span>
+    </a>
+  </nav>
+</aside>

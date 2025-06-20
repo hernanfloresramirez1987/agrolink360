@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "primeicons/primeicons.css";
 
 /* Definición de animaciones y gradientes via CSS‑first */
 @theme {

@@ -1,0 +1,30 @@
+ <!-- Footer -->
+ <footer 
+ [ngClass]="colorTheme() === 'green' 
+   ? 'bg-gradient-to-tr from-green-700/80 to-emerald-500/80' 
+   : 'bg-gradient-to-b from-slate-700 to-slate-900'"
+ class="w-full backdrop-blur-md text-white py-8 px-4 shadow-xl">
+ 
+ <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+   <div class="text-center md:text-left space-y-2">
+     <h2 class="text-2xl font-bold tracking-wide">AgroLink 360</h2>
+     <p class="text-sm text-white/80">Transformando la gestión agroindustrial con tecnología inteligente.</p>
+   </div>
+
+   <div class="flex space-x-6 text-sm">
+     <a href="#" class="hover:text-yellow-300 transition">Nosotros</a>
+     <a href="#" class="hover:text-yellow-300 transition">Servicios</a>
+     <a href="#" class="hover:text-yellow-300 transition">Contacto</a>
+   </div>
+
+   <div class="flex space-x-4 text-lg">
+     <a href="#" class="hover:text-blue-400 transition"><i class="fab fa-facebook-f"></i></a>
+     <a href="#" class="hover:text-pink-400 transition"><i class="fab fa-instagram"></i></a>
+     <a href="#" class="hover:text-sky-400 transition"><i class="fab fa-twitter"></i></a>
+   </div>
+ </div>
+
+ <div class="mt-6 text-center text-xs text-white/60">
+   © 2025 AgroLink 360. Desarrollado por Hernán Flores Ramírez.
+ </div>
+</footer>
