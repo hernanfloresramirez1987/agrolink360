@@ -1,1 +1,49 @@
-<p>user works!</p>
+<div [ngClass]="incolorTheme() === 'green' 
+    ? 'bg-gradient-to-br from-green-100 to-emerald-50' 
+    : 'bg-gradient-to-br from-slate-800 to-slate-900'"
+    class="p-4 rounded-xl shadow-xl overflow-x-auto">
+
+  <h2 [ngClass]="incolorTheme() === 'green' ? 'text-gray-700' : 'text-white'" class="text-2xl font-bold mb-4">
+    Lista de Usuarios
+  </h2>
+
+  <table class="min-w-full table-auto border-collapse">
+    <thead>
+      <tr [ngClass]="incolorTheme() === 'green' 
+        ? 'bg-gradient-to-r from-green-600 to-emerald-500 text-white' 
+        : 'bg-gradient-to-r from-slate-700 to-slate-900 text-white'">
+        <th class="p-3 text-left">#</th>
+        <th class="p-3 text-left">Nombre</th>
+        <th class="p-3 text-left">Email</th>
+        <th class="p-3 text-left">Rol</th>
+        <th class="p-3 text-center">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of usuarios; let i = index"
+        [ngClass]="incolorTheme() === 'green' 
+          ? 'hover:bg-emerald-100 border-green-200' 
+          : 'hover:bg-slate-700 border-slate-600'"
+        class="transition duration-300">
+        <td class="p-3 border-b">{{ i + 1 }}</td>
+        <td class="p-3 border-b">{{ user.nombre }}</td>
+        <td class="p-3 border-b">{{ user.email }}</td>
+        <td class="p-3 border-b">{{ user.rol }}</td>
+        <td class="p-3 border-b text-center space-x-2">
+          <button [ngClass]="incolorTheme() === 'green'
+              ? 'bg-green-500 hover:bg-green-600' 
+              : 'bg-slate-500 hover:bg-slate-600'"
+              class="text-white px-3 py-1 rounded transition duration-300">
+            Editar
+          </button>
+          <button [ngClass]="incolorTheme() === 'green'
+              ? 'bg-red-500 hover:bg-red-600' 
+              : 'bg-red-700 hover:bg-red-800'"
+              class="text-white px-3 py-1 rounded transition duration-300">
+            Eliminar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

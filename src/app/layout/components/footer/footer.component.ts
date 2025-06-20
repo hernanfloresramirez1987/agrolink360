@@ -1,10 +1,11 @@
 import { NgClass } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { ThemeService } from '../../services/theme.service';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
-  imports: [NgClass],
+  imports: [NgClass, RouterLink, RouterLinkActive],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
 })
